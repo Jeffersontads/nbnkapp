@@ -10,9 +10,51 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="primary">
-  <div id="container">
+<ion-content class="ion-padding" color="primary">
+  <div class="background">
+    <div class="bank-information ion-text-center">
+      <img class="qrcode" src="/assets/images/qrcode-nubank.png" alt="qr code nubank">
     
+      <span>Banco <strong>000 - Nu Pagamentos S.A</strong></span>
+      <span>Agência <strong>0000</strong></span>
+      <span>Conta <strong>0000000-0</strong></span>
+
+      <ion-list lines="full">
+        <ion-item *ngFor="let item of items" detail>
+          <ion-label>
+            <ion-icon slot="start" [name]="item.icon"></ion-icon>
+            {{item.text}}
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-button class="logout" color="light" expand="block" fill="outline">
+        <strong>Sair do app</strong>
+      </ion-button>
+    </div>
+  </div>
+  <div class="blocks">
+    <ion-card>
+      <ion-item class="ion-margin-vertical" lines="none">
+        <ion-icon slot="start" name="card-outline"></ion-icon>
+        <ion-label>Cartão de Crédito</ion-label>
+      </ion-item>
+
+      <ion-card-content class="ion-no-padding">
+        <div class="ion-padding ion-margin-vertical cash">
+          <span class="blue">Fatura atual</span>
+          <span class="blue value" > R$ 57,90</span>
+          <span>Limite disponível <span class="green">R$ 3000,00</span></span>
+        </div>
+
+        <div class="paddind-vertical footer">
+          <ion-item color="light" line="none" detail>
+            <ion-icon slot="start" name="pizza-outline"> </ion-icon>
+            <ion-label class="ion-text-wrap"> Compra mais recente em Ifood *ifood no valor de R$54,00 </ion-label>
+          </ion-item>
+        </div>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
 

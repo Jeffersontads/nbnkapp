@@ -1,21 +1,78 @@
 ion-header {
   ion-toolbar {
-    --min-height: 100px;
+    --min-height: 80px;
 
     ion-title {
       img {
-        width: 65px;
+        width: 45px;
         vertical-align: middle;
         margin-right: 10px;
       }
 
       span {
-        font-size: 14px;
+        font-size: 10px;
       }
 
       ion-button {
         display: block;
         align-items: center;
+      }
+    }
+  }
+}
+
+ion-content {
+  .background {
+    // opacity: 0;
+    display: none;
+
+    .bank-information {
+      .qrcode {
+        width: 90px;
+        margin: 1px auto;
+        display: block;
+      }
+      span {
+        display: block;
+        margin: 5px 0;
+        font-size: 12px;
+      }
+
+      ion-list {
+        margin-top: 20px;
+        background: transparent;
+
+        ion-label {
+          font-size: 15px;
+        }
+
+        ion-item {
+          color: #fff;
+          --background: transparent;
+          --detail-icon-opacity: 1;
+
+          &:first-of-type {
+            border-top: 0.55px solid rgba(255, 255, 255, 0.7);
+          }
+        }
+      }
+      
+      .logout {
+        margin-top: 20px;
+        margin-bottom: 100px;
+      }
+    }
+  }
+  
+  .blocks {
+    ion-card {
+      .cash {
+        span {
+          &.value {
+            font-size: 24px;
+            display: block;
+          }
+        }
       }
     }
   }
